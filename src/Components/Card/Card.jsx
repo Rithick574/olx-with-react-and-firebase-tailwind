@@ -2,9 +2,10 @@ import React from "react";
 import { BiHeart } from "react-icons/bi";
 import { HiLightningBolt } from "react-icons/hi";
 import classNames from 'classnames';
+import { BsFillLightningFill } from "react-icons/bs"; 
 
 function Card({ data, isFeatured }) {
-    console.log(data);
+    // console.log(data);
 
     const cardClasses = classNames('p-3', {
         'border-yellow-300 border-l-4': isFeatured,
@@ -13,6 +14,10 @@ function Card({ data, isFeatured }) {
     return (
         <div className="lg:w-1/4 pr-5 mb-3 relative ">
             <div className="border border-gray-200 bg-white shadow-2xl hover:shadow-orange-100 rounded cursor-pointer ">
+                <div className="absolute top-1 left-0 h-5 w-[35%] bg-yellow-400 text-xs text-gray-600 flex items-center justify-center gap-2 rounded">
+                      <BsFillLightningFill className="text-black" />
+                      featured
+                    </div>
                 <div className="h-52 overflow-hidden p-3">
                     <img src={data.image} alt="asdfa" className="mx-auto" />
                 </div>

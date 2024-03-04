@@ -6,11 +6,13 @@ import Home from "./Pages/Home";
 import Signup from "./Pages/Signup";
 import Login from "./Pages/Login";
 import AddProduct from "./Pages/AddProduct";
+import Footer from "./Components/Footer/Footer";
+import SubFooter from "./Components/Footer/SubFooter";
 
 function App() {
   const user = useContext(AuthContext);
   return (
-    <>
+    <> 
       <AuthProvider>
         <Navbar />
         <Routes>
@@ -19,6 +21,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/add-product" element={<AddProduct />} />
         </Routes>
+        {/* <Footer/>
+        <SubFooter/> */}
       </AuthProvider>
     </>
   );
